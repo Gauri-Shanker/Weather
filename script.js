@@ -14,7 +14,11 @@ searchbtn.addEventListener("click",()=>{
     checkweather(searchbox.value);
     console.log(typeof(searchbox.value));
 })
-const apiurl ="https://api.openweathermap.org/data/2.5/weather?&appid=8fa22f0682b35819fa29f94b1c7d06b9&units=metric&q=";
+
+// go to api.openweathermap.com and make an account and get your api key---------------------
+
+const apiurl ="https://api.openweathermap.org/data/2.5/weather?&appid=\"Enter Your Api Id\"&units=metric&q=";
+
 async function checkweather(cityvalue){
     const response = await fetch(apiurl+`${cityvalue}`);
     if(response.status==404){
