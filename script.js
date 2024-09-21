@@ -15,9 +15,10 @@ searchbtn.addEventListener("click",()=>{
     console.log(typeof(searchbox.value));
 })
 
+const API_KEY="8fa22f0682b35819fa29f94b1c7d06b9"
 // go to api.openweathermap.com and make an account and get your api key---------------------
 
-const apiurl ="https://api.openweathermap.org/data/2.5/weather?&appid=\"Enter Your Api Id\"&units=metric&q=";
+const apiurl =`https://api.openweathermap.org/data/2.5/weather?&appid=${API_KEY}&units=metric&q=`;
 
 async function checkweather(cityvalue){
     const response = await fetch(apiurl+`${cityvalue}`);
